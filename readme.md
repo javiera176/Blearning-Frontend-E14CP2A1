@@ -1,5 +1,7 @@
 # Actividad Presencial 2 de Jquery
 
+https://github.com/DesafioLatam/Blearning-Frontend-E14CP2A1
+
 ## Se pide construir una aplicación para listar tareas pendientes, o sea una aplicación del tipo To Do.
 
 - La aplicación consiste en la creación de tareas que pueden ser editadas, marcadas como completadas y eliminadas.
