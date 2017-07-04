@@ -1,23 +1,21 @@
-# Actividad Presencial 2 de Jquery
+# Actividad Presencial 2 de Jquery.
 
 https://github.com/DesafioLatam/Blearning-Frontend-E14CP2A1
 
-## Se pide construir una aplicación para listar tareas pendientes, o sea una aplicación del tipo To Do.
+## Ejercicios de desarrollo
 
-- La aplicación consiste en la creación de tareas que pueden ser editadas, marcadas como completadas y eliminadas.
+- Crear un input donde el usuario escribirá un color en inglés y un botón. El usuario al presionar el botón se debe cambiar el color de la página al color especificado.
 
-- Utilizando sistema de *grids* se debe dividir la página en **2 columnas** (Se puede utilizar Bootstrap):
-    - En la columna de la izquierda: Crear un campo de texto donde el usuario pueda ingresar el texto del *ToDo* y un botón para confirmar la creación.
-    - En la columna de la derecha: Se deben listar los *ToDo* creados. Cada *ToDo* en un *row*.
+- Crear dos input y un botón, el usuario debe ingresar su altura en uno de los inputs y el peso en el otro, se debe mostrar un mensaje con IMC resultante, si es normal, mostrar en verde, si es alto o bajo mostrar en rojo.
 
-- Cada *ToDo* de la lista debe tener a su lado un botón para marcar como completado y uno para eliminar el *ToDo*.
+- Crear un input, un botón y otro input. El usuario debe ingresar un valor numérico en el primero, y al presionar el botón en el segundo input debe aparecer de forma automática el valor más el IVA (incremento del 19%)
 
-- El botón para marcar como completado debe tener una clase ***class='completable'***
+- Crear tres inputs y un botón, los dos primeros inputs son para que el usuario ingrese su nombre y su apellido, al presionar el botón el texto del tercer input debe ser remplazado por la concatenación de los dos primeros.
 
-- Seleccionar con jQuery la clase *completable* y agregar el evento **.onclick**.
+  - Cambiar el código anterior para que el texto del tercer input se modifique automáticamente cada vez que alguien escriba en los inputs sin necesidad de presionar algún botón.
 
-- Al marcar un *ToDo* como completado:
-    - El botón para marcar como completado debe cambiar de color.
-    - El texto del *ToDo* debe ser tachado. (*text-decoration: line-through*)
+- Utilizar lightbox2 para construir una galería de imágenes http://lokeshdhakar.com/projects/lightbox2/
 
-- El botón de eliminar debe remover el *ToDo* de la lista.
+## Nivel avanzado
+
+- Crear una página que tiene 2 columnas, en la columna izquierda se muestran productos donde cada producto tiene nombre, precio y un link agregar, cada vez que se presione alguno de los links se debe agregar el nombre del producto a la columna derecha.
