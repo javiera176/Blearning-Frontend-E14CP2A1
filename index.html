@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Desafío 016</title>
+
+
+
+		<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!--mi estilo--> 
+	<link href="css/lightbox.css" rel="stylesheet">
+
+	<!--jquery--> 
+	<script src="js/lightbox.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <style>
+ 	img{
+
+ 		height: 20%;
+ 		width: 20%;
+ 	}
+ </style>
+
+	
+</head>
+<body>
+
+
+	 <form name="formu"><br> 
+    <input type="text" id="txtcaja1" value="ingresa color en inglés">
+    <br> 
+    </form>
+ 
+
+	<form >
+	<button type="submit" value="Enviar"><a href="#"  class= "boton">escoge color</a></button>
+	</form>
+
+	<br>
+	
+
+	<form name="formu"><br> 
+    <input type="text" id="txtcaja2" value="ingresa altura (cm)">
+    <br>
+    <input type="text" id="txtcaja3" value="ingresa peso">
+    <br> 
+    </form>
+	
+	<form >
+	<button type="submit" value="Enviar"><a href="#"  class= "boton2">calcular IMC</a></button>
+	</form>
+
+	 <form name="formu">  
+    <input type="text" id="txtcaja4"> 
+    </form>
+ 
+ 	 
+	<br>
+	 <form name="formu"><br> 
+    <input type="text" id="txtcaja5" value="ingresa número">
+    <br> 
+    </form>
+
+    <form >
+	<button type="submit" value="Enviar"><a href="#"  class= "boton3">calcular IVA</a></button>
+	</form>
+
+	 <form name="formu"> 
+    <input type="text" id="txtcaja6">
+    <br> 
+    </form>
+
+  		<br> 
+
+     <form name="formu"> <br>
+    <input type="text" id="txtcaja7" value="ingresa nombre">
+    <br> 
+    </form>
+
+     <form name="formu"> 
+    <input type="text" id="txtcaja8" value="ingresa apellido">
+    <br> 
+    </form> 
+
+     <form >
+	<button type="submit" value="Enviar"><a href="#"  class= "boton4">Concatenar</a></button>
+	</form>
+
+	    <form name="formu"> 
+    <input type="text" id="txtcaja9">
+    <br> 
+    </form>
+
+
+    <br> 
+	<p>ingrese nombre:</p>
+     <form name="formu">  
+    <input type="text" id="txtcaja10" >
+    <br> 
+    </form>
+
+	<p>ingrese apellido</p>
+     <form name="formu"> 
+    <input type="text" id="txtcaja11" >
+    <br> 
+    </form>  
+    <p>concatenación</p>
+	    <form name="formu"> 
+    <input type="text" id="txtcaja12">
+    <br> 
+    </form>
+
+   
+
+    <a href="images/pica.png" data-lightbox="image-1" data-title="Picachu"> <img src="images/pica.png" alt=""></a>
+
+    
+
+    <a href="images/minion.jpg" data-lightbox="image-1" data-title="Minion"><img src="images/minion.jpg" alt=""></a>
+	 
+	<script>
+
+		var caja1 = document.getElementById('txtcaja1'); 
+
+	   $('.boton').click(function(event){  
+
+	       $('body').css('background', caja1.value); 
+	   }); 
+
+
+
+		$('.boton2').click(function(event){ 
+
+			var calcularIMC = function(peso, altura){
+				return peso / ((altura * altura)/10000);
+			}
+
+			var imc = calcularIMC(parseInt(txtcaja3.value),parseInt(txtcaja2.value)); 
+			txtcaja4.value = imc;
+
+
+			var colorResu = function(imcResu){
+				 
+				if (imcResu > 25){
+					return $('#txtcaja4').css('color', 'red'); 
+			 		 
+			 	} else if (imcResu > 19) { 
+
+			 		return $('#txtcaja4').css('color', 'green');
+
+			 	} else {
+			 		return $('#txtcaja4').css('color', 'red'); 
+			 	}
+			} 
+			 resultado = colorResu(imc);  
+		}); 
+
+		$('.boton3').click(function(event){  
+
+			 var calcularIVA = function(num){
+			 	return num + (num * 0.19);
+				 
+			}
+
+			var iva = calcularIVA(parseInt(txtcaja5.value)); 
+			txtcaja6.value = iva;
+
+
+	    }); 
+
+	    $('.boton4').click(function(event){  
+
+			 txtcaja9.value =  txtcaja7.value + ' ' +  txtcaja8.value;
+
+	    });  
+
+
+		$("#txtcaja10, #txtcaja11 ").bind('input', function () {
+
+	   		 var  stt = $('#txtcaja10').val();
+	   		 var  stt2 = $('#txtcaja11').val();
+	   		  
+			$("#txtcaja12").val(stt + ' ' + stt2);
+
+		});
+
+	
+
+
+
+
+ 
+
+
+	</script>
+	
+</body>
+</html>
